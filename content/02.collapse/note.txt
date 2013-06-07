@@ -1,0 +1,1 @@
+When no width is provided for the children they will collapse to width of their content.

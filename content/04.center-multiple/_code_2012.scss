@@ -1,0 +1,11 @@
+.example-center-vh {
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    height: 100px;
+}
+
+.example-center-vh .box {
+    height: 50px;
+    width: 50px;
+}

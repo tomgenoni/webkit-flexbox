@@ -1,0 +1,12 @@
+.example-fm {
+    display: -webkit-flex;
+}
+
+.example-fm .box {
+    height: 100px;
+    width: 100px;
+}
+
+.example-fm .box-2 {
+    -webkit-flex: 1;
+}

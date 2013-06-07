@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox 2012 Patterns</title>
+  <link rel="stylesheet" href="stylesheets/main_2009.css">
+  <link rel="stylesheet" href="stylesheets/pygment.css">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+  <script src="js/functions.js"></script>
+</head>
+<body>
+    <div class="intro">
+        <h1>Webkit Flexbox Patterns</h1>
+        <p>Useful for both prototypes and Chrome-only projects, the following examples demonstrate simple patterns of the more broadly supported, older 2009 flexbox specification &mdash; Chrome, Safari, and iOS Mobile Safari &mdash; on the left and the newer but poorly supported &mdash; Chrome only &mdash; 2012 specification on the right. </p>
+    </div>
+    <div id="entries"><section class="entry">
+    <p class="note">Basic flexbox example showing children with fixed widths.</p>
+    <div class="example example-f">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-f&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-f</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-f</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-f</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-f</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">When no width is provided for the children they will collapse to width of their content.</p>
+    <div class="example example-fnw">
+    <div class="box box-1">box-1</div>
+    <div class="box box-2">box-2</div>
+    <div class="box box-3">content of box-3</div>
+</div>
+
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-fnw&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;</span>box-1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;</span>box-2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;</span>content of box-3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fnw</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fnw</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fnw</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fnw</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">All centered.</p>
+    <div class="example example-fc">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-fc&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fc</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+    <span class="na">-webkit-box-pack</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fc</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fc</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+    <span class="na">-webkit-justify-content</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fc</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">Centering multiple elements vertically and horizontally.</p>
+    <div class="example example-center-vh">
+    <div class="box box-1">box-1</div>
+    <div class="box box-2">box-2</div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-center-vh&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;</span>box-1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;</span>box-2<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-center-vh</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+    <span class="na">-webkit-box-pack</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
+    <span class="na">-webkit-box-align</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-center-vh</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-center-vh</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+    <span class="na">-webkit-justify-content</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
+    <span class="na">-webkit-align-items</span><span class="o">:</span> <span class="no">center</span><span class="p">;</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-center-vh</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">All justified right.</p>
+    <div class="example example-fe">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-fe&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fe</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+    <span class="na">-webkit-box-pack</span><span class="o">:</span> <span class="n">end</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fe</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fe</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+    <span class="na">-webkit-justify-content</span><span class="o">:</span> <span class="n">flex-end</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fe</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">Children with space in between.</p>
+    <div class="example example-jcb">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-jcb&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-jcb</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+    <span class="na">-webkit-box-pack</span><span class="o">:</span> <span class="no">justify</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-jcb</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-jcb</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+    <span class="na">-webkit-justify-content</span><span class="o">:</span> <span class="n">space-between</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-jcb</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">Last box with margin-left set to auto.</p>
+    <div class="example example-mla">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-mla&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="cm">/* Not available */</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-mla</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-mla</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-mla</span> <span class="nc">.box-3</span> <span class="p">{</span>
+    <span class="na">margin-left</span><span class="o">:</span> <span class="no">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">Middle child set to flex.</p>
+    <div class="example example-fm">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-fm&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fm</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fm</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fm</span> <span class="nc">.box-2</span> <span class="p">{</span>
+    <span class="na">-webkit-box-flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fm</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fm</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fm</span> <span class="nc">.box-2</span> <span class="p">{</span>
+    <span class="na">-webkit-flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">Last child set to flex.</p>
+    <div class="example example-fl">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-fl&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fl</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fl</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fl</span> <span class="nc">.box-3</span> <span class="p">{</span>
+    <span class="na">-webkit-box-flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fl</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fl</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fl</span> <span class="nc">.box-3</span> <span class="p">{</span>
+    <span class="na">-webkit-flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">All children set to flex.</p>
+    <div class="example example-ff">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-ff&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-ff</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-ff</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">-webkit-box-flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-ff</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-ff</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">-webkit-flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">Flexbox direction set to column.</p>
+    <div class="example example-fdc">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-fdc&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fdc</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+    <span class="na">-webkit-box-orient</span><span class="o">:</span> <span class="n">vertical</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fdc</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fdc</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+    <span class="na">-webkit-flex-direction</span><span class="o">:</span> <span class="n">column</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fdc</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">Column with last box margin-top set to auto.</p>
+    <div class="example example-fdcma">
+    <div class="box box-1"></div>
+    <div class="box box-2"></div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-fdcma&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="cm">/* Not available */</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fdcma</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+    <span class="na">-webkit-flex-direction</span><span class="o">:</span> <span class="n">column</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fdcma</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fdcma</span> <span class="nc">.box-3</span> <span class="p">{</span>
+    <span class="na">margin-top</span><span class="o">:</span> <span class="no">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section><section class="entry">
+    <p class="note">Column with with center box flex and overflow scroll.</p>
+    <div class="example example-fdcms">
+    <div class="box box-1"></div>
+    <div class="box box-2">
+        <div>Accusantium nostrum optio reiciendis ad qui itaque voluptatibus sit doloribus pariatur eum odit maxime quaerat illo provident alias minus laborum voluptates animi ex dolores veritatis commodi.</div>
+    </div>
+    <div class="box box-3"></div>
+</div>
+    <div class="code">
+        <div class="html">
+            <h3>HTML</h3>
+            <div class="source"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;example example-fdcms&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-1&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-2&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div&gt;</span>Accusantium nostrum optio reiciendis ad qui itaque voluptatibus sit doloribus pariatur eum odit maxime quaerat illo provident alias minus laborum voluptates animi ex dolores veritatis commodi.<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;box box-3&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+        </div>
+        <div class="css css-2009">
+            <button class="button">Enable</button>
+            <h3>2009</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fdcms</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-box</span><span class="p">;</span>
+    <span class="na">-webkit-box-orient</span><span class="o">:</span> <span class="n">vertical</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fdcms</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fdcms</span> <span class="nc">.box-2</span> <span class="p">{</span>
+    <span class="na">-webkit-box-flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="na">overflow-x</span><span class="o">:</span> <span class="no">scroll</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+        <div class="css css-2012 disabled">
+            <button class="button">Enable</button>
+            <h3>2012</h3>
+            <pre><div class="source"><pre><span class="nc">.example-fdcms</span> <span class="p">{</span>
+    <span class="na">display</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit-flex</span><span class="p">;</span>
+    <span class="na">-webkit-flex-direction</span><span class="o">:</span> <span class="n">column</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fdcms</span> <span class="nc">.box</span> <span class="p">{</span>
+    <span class="na">height</span><span class="o">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.example-fdcms</span> <span class="nc">.box-2</span> <span class="p">{</span>
+    <span class="na">-webkit-flex</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="na">overflow-x</span><span class="o">:</span> <span class="no">scroll</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</pre>
+        </div>
+    </div>
+</section></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/function.js"></script>
+</body>
+</html>

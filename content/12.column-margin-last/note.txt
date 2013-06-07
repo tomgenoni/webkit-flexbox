@@ -1,0 +1,1 @@
+Column with last box margin-top set to auto.

@@ -1,0 +1,149 @@
+$font-sans: "Source Sans Pro";
+
+body {
+    margin: 100px;
+    font: 12px/1.2 $font-sans;
+    color: #222;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    color: #999;
+}
+
+.intro {
+    font: 16px/1.4 $font-sans;
+    margin-bottom: 50px;
+    color: #666;
+    width: 600px;
+
+    .supported-grid {
+        @include display-box;
+
+        h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        > div {
+            width: 33%;
+            @include box-flex(1);
+            box-sizing: border-box;
+
+            &:first-child {
+                padding-right: 50px;
+            }
+        }
+
+        table {
+
+            td {
+                white-space: nowrap;
+                padding: 2px 6px 2px 0;
+                font-size: 14px;
+
+                &:first-child {
+                    border: none;
+                    color: #33983e;
+                }
+            }
+
+            .disabled {
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.note {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+
+section {
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+.example {
+    background: url(../i/bkg.gif);
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.box {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+$box-bg: #5c8ace;
+
+.box-1 {
+    background: $box-bg
+}
+.box-2 {
+    background: lighten($box-bg, 10%);
+}
+.box-3 {
+    background: lighten($box-bg, 20%);
+}
+
+.button {
+
+}
+
+.code {
+    @include display-box;
+
+    .html,
+    .css {
+        box-sizing: border-box;
+        padding: 10px;
+        background: #f9f9f9;
+        position: relative;
+        width: 33.33%;
+
+        .button {
+            display: none;
+        }
+        &.disabled {
+            span {
+                 color: #ccc !important;
+            }
+            .button {
+                 display: block;
+            }
+        }
+    }
+
+    pre {
+        font-family: monospace;
+        white-space: pre-wrap;
+    }
+
+    > div {
+        border-left: 5px solid #fff;
+        border-right: 5px solid #fff;
+
+        &:first-child {
+            border-left: none;
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    .button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}

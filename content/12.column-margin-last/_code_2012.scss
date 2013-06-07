@@ -1,0 +1,14 @@
+.example-fdcma {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    width: 100px;
+    height: 400px;
+}
+
+.example-fdcma .box {
+    height: 100px;
+}
+
+.example-fdcma .box-3 {
+    margin-top: auto;
+}

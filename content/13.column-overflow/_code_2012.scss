@@ -1,0 +1,15 @@
+.example-fdcms {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    width: 100px;
+    height: 400px;
+}
+
+.example-fdcms .box {
+    height: 100px;
+}
+
+.example-fdcms .box-2 {
+    -webkit-flex: 1;
+    overflow-x: scroll;
+}

@@ -1,0 +1,373 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../sass/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../sass/partials/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../sass/partials/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../sass/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../sass/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 3, ../sass/partials/_common.scss */
+body {
+  margin: 100px;
+  font: 12px/1.2 "Source Sans Pro";
+  color: #222;
+}
+
+/* line 9, ../sass/partials/_common.scss */
+h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+/* line 14, ../sass/partials/_common.scss */
+h3 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+  color: #999;
+}
+
+/* line 21, ../sass/partials/_common.scss */
+.intro {
+  font: 16px/1.4 "Source Sans Pro";
+  margin-bottom: 50px;
+  color: #666;
+  width: 600px;
+}
+/* line 27, ../sass/partials/_common.scss */
+.intro .supported-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+/* line 30, ../sass/partials/_common.scss */
+.intro .supported-grid h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+/* line 35, ../sass/partials/_common.scss */
+.intro .supported-grid > div {
+  width: 33%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  box-sizing: border-box;
+}
+/* line 40, ../sass/partials/_common.scss */
+.intro .supported-grid > div:first-child {
+  padding-right: 50px;
+}
+/* line 47, ../sass/partials/_common.scss */
+.intro .supported-grid table td {
+  white-space: nowrap;
+  padding: 2px 6px 2px 0;
+  font-size: 14px;
+}
+/* line 52, ../sass/partials/_common.scss */
+.intro .supported-grid table td:first-child {
+  border: none;
+  color: #33983e;
+}
+/* line 58, ../sass/partials/_common.scss */
+.intro .supported-grid table .disabled {
+  opacity: .5;
+}
+
+/* line 65, ../sass/partials/_common.scss */
+.note {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* line 71, ../sass/partials/_common.scss */
+section {
+  padding-bottom: 50px;
+  padding-top: 40px;
+}
+
+/* line 76, ../sass/partials/_common.scss */
+.example {
+  background: url(../i/bkg.gif);
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* line 82, ../sass/partials/_common.scss */
+.box {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* line 89, ../sass/partials/_common.scss */
+.box-1 {
+  background: #5c8ace;
+}
+
+/* line 92, ../sass/partials/_common.scss */
+.box-2 {
+  background: #83a6da;
+}
+
+/* line 95, ../sass/partials/_common.scss */
+.box-3 {
+  background: #aac2e6;
+}
+
+/* line 103, ../sass/partials/_common.scss */
+.code {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+/* line 107, ../sass/partials/_common.scss */
+.code .html,
+.code .css {
+  box-sizing: border-box;
+  padding: 10px;
+  background: #f9f9f9;
+  position: relative;
+  width: 33.33%;
+}
+/* line 114, ../sass/partials/_common.scss */
+.code .html .button,
+.code .css .button {
+  display: none;
+}
+/* line 118, ../sass/partials/_common.scss */
+.code .html.disabled span,
+.code .css.disabled span {
+  color: #ccc !important;
+}
+/* line 121, ../sass/partials/_common.scss */
+.code .html.disabled .button,
+.code .css.disabled .button {
+  display: block;
+}
+/* line 127, ../sass/partials/_common.scss */
+.code pre {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+/* line 132, ../sass/partials/_common.scss */
+.code > div {
+  border-left: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+/* line 136, ../sass/partials/_common.scss */
+.code > div:first-child {
+  border-left: none;
+}
+/* line 139, ../sass/partials/_common.scss */
+.code > div:last-child {
+  border-right: none;
+}
+/* line 144, ../sass/partials/_common.scss */
+.code .button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* line 1, ../content/01.basic/_code_2009.scss */
+.example-f {
+  display: -webkit-box;
+}
+
+/* line 5, ../content/01.basic/_code_2009.scss */
+.example-f .box {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 1, ../content/02.collapse/_code_2009.scss */
+.example-fnw {
+  display: -webkit-box;
+}
+
+/* line 5, ../content/02.collapse/_code_2009.scss */
+.example-fnw .box {
+  height: 100px;
+}
+
+/* line 1, ../content/03.center-all/_code_2009.scss */
+.example-fc {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+}
+
+/* line 6, ../content/03.center-all/_code_2009.scss */
+.example-fc .box {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 1, ../content/04.center-multiple/_code_2009.scss */
+.example-center-vh {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  height: 100px;
+}
+
+/* line 8, ../content/04.center-multiple/_code_2009.scss */
+.example-center-vh .box {
+  height: 50px;
+  width: 50px;
+}
+
+/* line 1, ../content/05.justified-right/_code_2009.scss */
+.example-fe {
+  display: -webkit-box;
+  -webkit-box-pack: end;
+}
+
+/* line 6, ../content/05.justified-right/_code_2009.scss */
+.example-fe .box {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 1, ../content/06.space-between/_code_2009.scss */
+.example-jcb {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+
+/* line 6, ../content/06.space-between/_code_2009.scss */
+.example-jcb .box {
+  height: 100px;
+  width: 100px;
+}
+
+/* Not available */
+/* line 1, ../content/08.middle-flex/_code_2009.scss */
+.example-fm {
+  display: -webkit-box;
+}
+
+/* line 5, ../content/08.middle-flex/_code_2009.scss */
+.example-fm .box {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 10, ../content/08.middle-flex/_code_2009.scss */
+.example-fm .box-2 {
+  -webkit-box-flex: 1;
+}
+
+/* line 1, ../content/09.last-flex/_code_2009.scss */
+.example-fl {
+  display: -webkit-box;
+}
+
+/* line 5, ../content/09.last-flex/_code_2009.scss */
+.example-fl .box {
+  height: 100px;
+  width: 100px;
+}
+
+/* line 10, ../content/09.last-flex/_code_2009.scss */
+.example-fl .box-3 {
+  -webkit-box-flex: 1;
+}
+
+/* line 1, ../content/10.all-flex/_code_2009.scss */
+.example-ff {
+  display: -webkit-box;
+}
+
+/* line 5, ../content/10.all-flex/_code_2009.scss */
+.example-ff .box {
+  height: 100px;
+  -webkit-box-flex: 1;
+}
+
+/* line 1, ../content/11.column/_code_2009.scss */
+.example-fdc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  width: 100px;
+  height: 400px;
+}
+
+/* line 8, ../content/11.column/_code_2009.scss */
+.example-fdc .box {
+  height: 100px;
+}
+
+/* Not available */
+/* line 1, ../content/13.column-overflow/_code_2009.scss */
+.example-fdcms {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  width: 100px;
+  height: 400px;
+}
+
+/* line 8, ../content/13.column-overflow/_code_2009.scss */
+.example-fdcms .box {
+  height: 100px;
+}
+
+/* line 12, ../content/13.column-overflow/_code_2009.scss */
+.example-fdcms .box-2 {
+  -webkit-box-flex: 1;
+  overflow-x: scroll;
+}

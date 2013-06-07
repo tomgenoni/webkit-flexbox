@@ -1,4 +1,4 @@
-webkit-flexbox
-==============
+flexbox-showdown
+================
 
-Code snippets and examples for layout patterns from the 2009 and 2012 spec.
+Visual examples of 2012 and 2009 flebox spec with HTML/CSS.

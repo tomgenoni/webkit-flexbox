@@ -1,0 +1,12 @@
+.example-fl {
+    display: -webkit-box;
+}
+
+.example-fl .box {
+    height: 100px;
+    width: 100px;
+}
+
+.example-fl .box-3 {
+    -webkit-box-flex: 1;
+}
