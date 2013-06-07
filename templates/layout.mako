@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flexbox 2012 Patterns</title>
+  <title>Webkit Flexbox Patterns</title>
   <link rel="stylesheet" href="stylesheets/main_2009.css">
   <link rel="stylesheet" href="stylesheets/pygment.css">
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
   <script src="js/functions.js"></script>
+  <meta name="description" content="Visual patterns and code examples for the different flexbox implementations for prototypes or Webkit only projects.">
 </head>
 <body>
     <div class="intro">
