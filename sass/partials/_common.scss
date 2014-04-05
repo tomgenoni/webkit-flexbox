@@ -6,6 +6,11 @@ body {
     color: #222;
 }
 
+a {
+    text-decoration: none;
+    color: #5c8ace;
+}
+
 h1 {
     font-size: 34px;
     margin-bottom: 15px;
@@ -109,7 +114,7 @@ $box-bg: #5c8ace;
         padding: 10px;
         background: #f9f9f9;
         position: relative;
-        width: 33.33%;
+        width: 50%;
 
         .button {
             display: none;

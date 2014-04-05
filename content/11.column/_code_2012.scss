@@ -1,6 +1,6 @@
 .example-fdc {
-    display: -webkit-flex;
-    -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column;
     width: 100px;
     height: 400px;
 }

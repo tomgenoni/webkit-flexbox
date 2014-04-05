@@ -18,7 +18,6 @@ for dir in subdirs:
 
     # Read files to get data.
     ex_note = open('content/'+dir+'/note.txt').read()
-    ex_css_2009 = open('content/'+dir+'/_code_2009.scss').read()
     ex_css_2012 = open('content/'+dir+'/_code_2012.scss').read()
     ex_html = open('content/'+dir+'/code.html').read()
 
@@ -30,12 +29,11 @@ for dir in subdirs:
     # HTML preformatter.
     lexer = get_lexer_by_name("scss", stripall=True)
     formatter = HtmlFormatter(cssclass="source")
-    ex_css_2009 = highlight(ex_css_2009, lexer, formatter)
     ex_css_2012 = highlight(ex_css_2012, lexer, formatter)
 
     # Use the template to dump the data.
     entry_tmpl = Template(filename='templates/entry.mako')
-    entry_html += entry_tmpl.render(template_note=ex_note, template_css_2009=ex_css_2009, template_css_2012=ex_css_2012, template_html=ex_html, template_html_pre=ex_html_pre)
+    entry_html += entry_tmpl.render(template_note=ex_note, template_css_2012=ex_css_2012, template_html=ex_html, template_html_pre=ex_html_pre)
 
 
 build_file = open('index.html', 'w+')

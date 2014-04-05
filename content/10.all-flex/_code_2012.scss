@@ -1,8 +1,8 @@
 .example-ff {
-    display: -webkit-flex;
+    display: flex;
 }
 
 .example-ff .box {
     height: 100px;
-    -webkit-flex: 1;
+    flex: 1;
 }

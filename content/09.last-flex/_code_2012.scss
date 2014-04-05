@@ -1,5 +1,5 @@
 .example-fl {
-    display: -webkit-flex;
+    display: flex;
 }
 
 .example-fl .box {
@@ -8,5 +8,5 @@
 }
 
 .example-fl .box-3 {
-    -webkit-flex: 1;
+    flex: 1;
 }

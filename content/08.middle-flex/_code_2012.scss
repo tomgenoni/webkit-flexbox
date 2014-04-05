@@ -1,5 +1,5 @@
 .example-fm {
-    display: -webkit-flex;
+    display: flex;
 }
 
 .example-fm .box {
@@ -8,5 +8,5 @@
 }
 
 .example-fm .box-2 {
-    -webkit-flex: 1;
+    flex: 1;
 }
